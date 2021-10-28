@@ -6,10 +6,14 @@ using UnityEngine.UI;
 
 public class Player2Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public PlayerController1 playerController1;
     public float movementSpeed = 10.0f;
     public float horizontalInput;
     public float verticalInput;
+    public Text timerText2;
+    public float timer2 = 5;
+    public bool timerActive;
 
     private int counter;
     private RandomMovement randomMovement;
@@ -30,11 +34,7 @@ public class Player2Controller : MonoBehaviour
         Right();
         Up();
         Down();
-       // transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * movementSpeed);
-
-
-        //transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * movementSpeed);
-
+        CountDown();
     }
 
 
@@ -69,7 +69,26 @@ public class Player2Controller : MonoBehaviour
             transform.Translate(Vector3.right.normalized * Time.deltaTime * movementSpeed);
         }
     }
+    void CountDown()
+    {
+        if (!timerActive)
+        {
+            return;
+        }
+        if (timer2 > 0)
+        {
+            timerText2.text = "Time: " + Mathf.Round(timer2);
+            timer2 -= Time.deltaTime;
 
+        }
+
+        else
+        {
+            Debug.Log("Player2 wins, Player 1 loses!!");
+        }
+    }
 }
+
+
 
 

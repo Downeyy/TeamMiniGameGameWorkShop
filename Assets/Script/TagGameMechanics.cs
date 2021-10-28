@@ -18,11 +18,12 @@ public class TagGameMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (blue == true)
+        // if (blue == true)
         //    gameObject.GetComponent<Renderer>().material.color = Color.blue;
 
-      //  if (red == true)
-         //   gameObject.GetComponent<Renderer>().material.color = Color.red;
+        //  if (red == true)
+        //   gameObject.GetComponent<Renderer>().material.color = Color.red;
+        
     }
 
     private void OnCollisionEnter(Collision collision)
