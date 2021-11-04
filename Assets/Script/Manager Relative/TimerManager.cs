@@ -19,7 +19,7 @@ public class TimerManager : MonoBehaviour
     private Text gameOverMessenger;
 
     //private Text
-    public bool boolioJones = false;
+    public bool winCondition = false;
     private void Start()
     {
 
@@ -31,7 +31,7 @@ public class TimerManager : MonoBehaviour
     public bool player1;
     private void Update()
     {
-        if (player1 && boolioJones) 
+        if (player1 && winCondition) 
         {
             // Counter
             tempCount -= Time.deltaTime;
@@ -39,6 +39,7 @@ public class TimerManager : MonoBehaviour
             {
                 //Update Text
                 gameOverMessenger = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
+                timer1.text = ("");
                 gameOverMessenger.text = "Player One Wins!";
                 gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.SetActive(true);
                 Time.timeScale = 0;
@@ -53,12 +54,13 @@ public class TimerManager : MonoBehaviour
         //Player 2
         else
         {
-            if (boolioJones)
+            if (winCondition)
             {
                 tempCount -= Time.deltaTime;
                 if (tempCount < 0.0f)
                 {
                     gameOverMessenger = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
+                    timer1.text = ("");
                     gameOverMessenger.text = "Player Two Wins!";
                     gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.SetActive(true);
                     Time.timeScale = 0;
@@ -128,7 +130,7 @@ public class TimerManager : MonoBehaviour
     {
         tempCount = countDown;
         player1 = true;
-        boolioJones =true;
+        winCondition = true;
         //timer1Val = 10;
         //timer2Val = 10;
         //StartCoroutine(StartTimerTwo(1));
@@ -140,7 +142,7 @@ public class TimerManager : MonoBehaviour
     {
          tempCount = countDown;
         player1 = false;
-        boolioJones = true;
+        winCondition = true;
 
         //timer1Val = 10;
         //timer2Val = 10;
