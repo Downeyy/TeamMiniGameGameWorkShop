@@ -686,7 +686,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1524566662, guid: 2389a94d2ffe1d2448bab7a9aaf08a1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2389a94d2ffe1d2448bab7a9aaf08a1a, type: 3}
 --- !u!1001 &745624117
 PrefabInstance:
@@ -751,7 +752,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1524566662, guid: 2389a94d2ffe1d2448bab7a9aaf08a1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2389a94d2ffe1d2448bab7a9aaf08a1a, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -1137,6 +1139,7 @@ MonoBehaviour:
   timer1Val: 10
   timer2Val: 0
   tManager: {fileID: 1211643385}
+  boolioJones: 0
   player1: 1
   countDown: 10
   tempCount: 0
